@@ -114,12 +114,9 @@ def main():
                 sleep(MIN_WAIT_TIME)
             logging.info('churning...')
             rpc_handler.sweep_all(address, priority=args.priority)
-        logging.info('churned successfully')
+            logging.info('churned successfully')
 
-        # we don't wait after the last churn, so right now the balance should be 0
-        # thus we print the unlocked balance
-        _, unlocked_balance = rpc_handler.get_balance()
-        logging.info('Churn process ended.\nCurrent unlocked balance: {0}'.format(unlocked_balance))
+        logging.info('Churn process ended.')
 
     except Exception as e:
         logging.error('Exception occurred: {0}. Aborting'.format(e))
