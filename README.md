@@ -8,9 +8,9 @@ Read more about [what is churning?](https://monero.stackexchange.com/questions/4
 
 The `churn.py` script automatically churns your funds multiple times in a selected time interval.  
 
-## Starting a wallet RPC server
+## Start a wallet RPC server
 To use the script you must have a wallet rpc server running. If you're running monero daemon on 
-your local machine, you can start a wallet rpc server by running
+your local machine, you can start a wallet rpc server by running:
 ```
 monero-wallet-rpc --disable-rpc-login --wallet-file <your_wallet_name> --rpc-bind-port 18082 
 ```
@@ -22,13 +22,13 @@ username+password as arguments to the script.
 ## Start churning
 
 After you have rpc server running (assuming on localhost:18082) you can start churning with the default 
-parameters by running
+parameters by running:
 ```
 python3 churn.py
 ```
 
 You can choose the churn parameters according to your paranoia level. You should read
-the help of the `churn.py` script to see the different parameters
+the help of the `churn.py` script to see the different parameters:
 ```
 python3 churn.py --help
 ```
@@ -36,5 +36,5 @@ python3 churn.py --help
 Logs are written to a file `churn.log` in the current directory.
 
 ## Tip Jar
-Donations are greatly appreciated  
+Donations are greatly appreciated.  
 Monero address: `4D4HpbmA9VJPjJHutYjZtsb7zBhJQc4CodAd5ujsxxVPjHtQ8ELKTgwJig64wEzFry9NWnm47t4jcWMH4cM2FjLZNjmtcvVAUxj67Ud5Z8`
